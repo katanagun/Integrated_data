@@ -53,11 +53,7 @@ public class AnalyzerImpl<T> implements Analyzer<T> {
         Data<T> analyzed = analyze(data);
         return new DataImpl<>(converter.convert(analyzed.getContent()));
     }
-
-    /**
-     * Метод, имитирующий отправку текста и targets в нейросеть и получение семантического анализа.
-     * Здесь заглушка — в реальном коде должен быть вызов API или обработка через браузер.
-     */
+    
     private Data<String> runSemanticAnalysis(String text) throws IntegratorException {
         if (text == null || text.trim().isEmpty()) {
             throw new IntegratorException("Входной текст отсутствует.");
